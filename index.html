@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Медициналық лабиринт</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<!-- Бастапқы экран -->
+<div id="welcome-screen" class="screen">
+  <h1>Лабиринтке қош келдіңіз!</h1>
+  <input type="text" id="player-name" placeholder="Атыңыз Жөніңіз">
+  <button id="start-btn">Бастау</button>
+</div>
+
+<!-- Ойын экраны -->
+<div id="game-screen" class="screen hidden">
+  <div id="maze-container"></div>
+  <div id="controls">
+    <button id="up-btn">↑</button>
+    <div>
+      <button id="left-btn">←</button>
+      <button id="down-btn">↓</button>
+      <button id="right-btn">→</button>
+    </div>
+  </div>
+  <p>Қадамдар: <span id="steps-count">0</span></p>
+  <p>Деңгей: <span id="level-count">1</span></p>
+
+  <!-- Сұрақ экраны -->
+  <div id="question-screen" class="hidden">
+    <p id="question-text"></p>
+    <div id="answers"></div>
+  </div>
+</div>
+
+<!-- Нәтиже экраны -->
+<div id="result-screen" class="screen hidden">
+  <h1>Құттықтаймыз!</h1>
+  <p id="result-text"></p>
+  <canvas id="confetti-canvas"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
